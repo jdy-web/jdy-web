@@ -1,4 +1,5 @@
 ---
+icon: function
 layout:
   title:
     visible: true
