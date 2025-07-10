@@ -206,12 +206,28 @@ getFormatFields
 ### 2.3. 逻辑命名规则
 
 {% hint style="info" %}
-常量名 采用帕斯卡命名法(单词大写且使用下划线分隔)
+常量名 采用大写蛇形命名法(单词大写且使用下划线分隔)
 {% endhint %}
 
 ```
 ✅
 MAX_FILE_SIZE
+```
+
+***
+
+{% hint style="info" %}
+枚举 类型名为帕斯卡命名法(单词相连，单词首字母大写)，成员名为大写蛇形命名法(单词大写且使用下划线分隔)
+{% endhint %}
+
+```
+✅
+enum LogLevel {
+  ERROR = 'error',
+  WARNING = 'warning',
+  INFO = 'info',
+  DEBUG = 'debug',
+}
 ```
 
 ***
