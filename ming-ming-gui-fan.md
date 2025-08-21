@@ -217,7 +217,9 @@ MAX_FILE_SIZE
 ***
 
 {% hint style="info" %}
-枚举 类型名为帕斯卡命名法(单词相连，单词首字母大写)，成员名为帕斯卡命名法(单词相连，单词首字母大写)
+枚举：类型名与成员名均采用帕斯卡命名法(单词相连，单词首字母大写)
+
+对于字符串枚举，其值推荐使用小写蛇形命名法(单词小写且使用下划线分隔)
 {% endhint %}
 
 ```
@@ -226,7 +228,7 @@ enum UserStatus {
     Active = 'active',
     Inactive = 'inactive',
     Suspended = 'suspended',
-    PendingVerification = 'pending'
+    PendingVerification = 'pending_verification'
 }
 ```
 
