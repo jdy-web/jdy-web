@@ -29,4 +29,4 @@ import classNames from 'classNames'
 import ClassNames from 'classNames'
 ```
 
-## 2. mobx
+## 2. mobx observerable数组
