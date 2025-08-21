@@ -217,16 +217,16 @@ MAX_FILE_SIZE
 ***
 
 {% hint style="info" %}
-枚举 类型名为帕斯卡命名法(单词相连，单词首字母大写)，成员名为大写蛇形命名法(单词大写且使用下划线分隔)
+枚举 类型名为帕斯卡命名法(单词相连，单词首字母大写)，成员名为帕斯卡命名法(单词相连，单词首字母大写)
 {% endhint %}
 
 ```
 ✅
-enum LogLevel {
-  ERROR = 'error',
-  WARNING = 'warning',
-  INFO = 'info',
-  DEBUG = 'debug',
+enum UserStatus {
+    Active = 'active',
+    Inactive = 'inactive',
+    Suspended = 'suspended',
+    PendingVerification = 'pending'
 }
 ```
 
