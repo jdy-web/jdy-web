@@ -72,3 +72,27 @@ isEmpty(0);         // true - 数字0被认为是"空"
 isEmpty(new Date()); // true - 日期对象被认为是"空"
 isEmpty(true);      // true - 布尔值被认为是"空"
 ```
+
+## 3. if 语句写法 和 短路逻辑写法
+
+{% hint style="info" %}
+**if 相比 `&&` 的优势：**
+
+* if 明确表达了「条件成立时才执行某逻辑」，语义直观，对团队协作、代码审查更友好。
+* 即使逻辑扩展，也能自然添加新语句
+* 在 if 代码块里加日志、加断点都很自然。
+* 避免潜在副作用：&& 是一个表达式，返回值可能被意外使用：
+{% endhint %}
+
+```javascript
+// 👍 推荐 - 在 逻辑判断 + 执行语句 时，统一使用 if
+if (dataCommentListRef.current) {
+  dataCommentListRef.current.scrollTop = 0;
+}
+
+// 👍 推荐 -  允许在 JSX 条件渲染 场景使用 &&
+{list.length > 0 && <CommentList data={list} />}
+
+// 🤔 不推荐 - 不建议在 执行副作用（赋值、调用函数）时用 &&
+node && (node.scrollTop = 0);
+```
