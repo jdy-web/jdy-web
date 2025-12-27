@@ -2,6 +2,7 @@
 cover: .gitbook/assets/资源 12@6x.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
     size: hero
@@ -14,6 +15,8 @@ layout:
   outline:
     visible: true
   pagination:
+    visible: true
+  metadata:
     visible: true
 ---
 
@@ -31,6 +34,10 @@ layout:
 
 {% content-ref url="react-gui-fan.md" %}
 [react-gui-fan.md](react-gui-fan.md)
+{% endcontent-ref %}
+
+{% content-ref url="pug-gui-fan.md" %}
+[pug-gui-fan.md](pug-gui-fan.md)
 {% endcontent-ref %}
 
 {% content-ref url="zui-jia-shi-jian.md" %}
@@ -53,11 +60,10 @@ layout:
 
 ## 参考文献
 
-* 前端开发白皮书 [https://kms.fineres.com/x/mIBNFg](https://kms.fineres.com/x/mIBNFg)&#x20;
+* 前端开发白皮书 [https://kms.fineres.com/x/mIBNFg](https://kms.fineres.com/x/mIBNFg)
 * 前端组内书写风格讨论 [https://kms.fineres.com/x/bMCeQw](https://kms.fineres.com/x/bMCeQw)
 * 《Clean Code》
 
 ## 鸣谢
 
 <div align="left" data-full-width="false"><figure><img src=".gitbook/assets/alisa.png" alt="Alisa.fan" width="64"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/black.png" alt="black.guo" width="64"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/cytus.png" alt="cytus" width="64"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/downy.png" alt="" width="64"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/ekko.png" alt="ekko"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/eric.png" alt="eric.wang"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/fan.png" alt="fan.robin"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/kevin.png" alt="kevin.shi"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/lei.png" alt="lei.wang" width="64"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/liaw.png" alt="liaw"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/random.png" alt="random" width="64"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/sean.png" alt="sean.yang"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/skye.png" alt="skye"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/stan.png" alt="stan.yang"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/wilson.png" alt="wilson.yang"><figcaption></figcaption></figure> <figure><img src=".gitbook/assets/windy.png" alt="windy"><figcaption></figcaption></figure></div>
-
