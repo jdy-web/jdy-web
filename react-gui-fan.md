@@ -97,29 +97,30 @@ const B = (props) => {
 非必要尽量避免在自定义hooks中渲染view，本质是为了抽象逻辑，view的抽象则为组件职责
 {% endhint %}
 
-<pre><code>⛔ // 不推荐：在自定义hook中抽象复用渲染逻辑
+```
+⛔ // 不推荐：在自定义hook中抽象复用渲染逻辑
 const useSyncTableRender = ()=>{
     const renderSyncBtn = ()=>{
         ...
-        return &#x3C;Button/>
+        return <Button/>
     }
     
     const renderSyncLogButton = ()=>{
         ...
-        return &#x3C;Button/>
+        return <Button/>
     }
-<strong>
-</strong>    return {
+
+    return {
         renderSyncBtn,
         renderSyncLogButton
     }
 }
 
 ✅ // 推荐：通过组件抽象复用渲染逻辑
-&#x3C;SyncBtn>
-&#x3C;SyncLogBtn>
+<SyncBtn>
+<SyncLogBtn>
 
-</code></pre>
+```
 
 ### 1.2. 利用组件外纯函数简化组件
 
@@ -219,3 +220,14 @@ const Comp = () => {
     }, []);
 }
 ```
+
+## 2. 推荐阅读
+
+### 2.1 官方指南
+
+_**useEffect**_
+
+* 你可能不需要 Effect：[https://zh-hans.react.dev/learn/you-might-not-need-an-effect](https://zh-hans.react.dev/learn/you-might-not-need-an-effect)
+* 将事件从 Effect 中分开：[https://zh-hans.react.dev/learn/separating-events-from-effects](https://zh-hans.react.dev/learn/separating-events-from-effects)
+* 移除 Effect依赖：[https://zh-hans.react.dev/learn/removing-effect-dependencies](https://zh-hans.react.dev/learn/removing-effect-dependencies)
+
