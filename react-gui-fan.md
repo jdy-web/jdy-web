@@ -1,6 +1,7 @@
 ---
 icon: react
 layout:
+  width: default
   title:
     visible: true
   description:
@@ -10,6 +11,8 @@ layout:
   outline:
     visible: true
   pagination:
+    visible: true
+  metadata:
     visible: true
 ---
 
@@ -23,7 +26,8 @@ layout:
 提升代码可维护性
 {% endhint %}
 
-```
+{% code fullWidth="false" expandable="true" %}
+```typescript
 ✅
 const useAppInstall = (props: {appId: string}) => {
     const {appId} = props;
@@ -56,7 +60,9 @@ const B = (props) => {
     )
 }
 ```
+{% endcode %}
 
+{% code expandable="true" %}
 ```
 ⛔
 const A = (props) => {
@@ -85,6 +91,35 @@ const B = (props) => {
     )
 }
 ```
+{% endcode %}
+
+{% hint style="warning" %}
+非必要尽量避免在自定义hooks中渲染view，本质是为了抽象逻辑，view的抽象则为组件职责
+{% endhint %}
+
+<pre><code>⛔ // 不推荐：在自定义hook中抽象复用渲染逻辑
+const useSyncTableRender = ()=>{
+    const renderSyncBtn = ()=>{
+        ...
+        return &#x3C;Button/>
+    }
+    
+    const renderSyncLogButton = ()=>{
+        ...
+        return &#x3C;Button/>
+    }
+<strong>
+</strong>    return {
+        renderSyncBtn,
+        renderSyncLogButton
+    }
+}
+
+✅ // 推荐：通过组件抽象复用渲染逻辑
+&#x3C;SyncBtn>
+&#x3C;SyncLogBtn>
+
+</code></pre>
 
 ### 1.2. 利用组件外纯函数简化组件
 
@@ -184,8 +219,3 @@ const Comp = () => {
     }, []);
 }
 ```
-
-
-
-
-
